@@ -71,7 +71,7 @@ link[type="image/x-icon"] {
 
 .middle input[type='text'] {
     height: 40px;
-    max-width: 515px;
+    width: 515px;
     border-radius: 15px 0 0 15px;
     padding: 1px;
     border: 1px solid var(--sbColor);
