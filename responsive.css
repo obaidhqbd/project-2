@@ -1,0 +1,63 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* এই কোডটি শুধুমাত্র ৭৬৮ থেকে ১০২৪ পিক্সেল স্ক্রিনের মধ্যে কাজ করবে */
+    .left_content {
+        display: none;
+    }
+
+    .main_content {
+        flex-basis: 48%;
+    }
+
+
+    .left img {
+        height: 63px;
+        width: 123px;
+        margin-left: -15px;
+    }
+
+    .middle input[type='text'] {
+        max-width: 200px;
+        
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* এই কোডটি শুধুমাত্র ৭৬৭ পিক্সেল বা তার চেয়ে ছোট স্ক্রিনে কাজ করবে */
+    .left_content {
+        display: none;
+    }
+
+    .main_content {
+        flex-basis: 100%;
+    }
+
+    .middle_content {
+        padding: 5px;
+    }
+
+    .left img {
+        height: 63px;
+        width: 123px;
+        margin-left: -15px;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .search {
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+    }
+
+    .search:hover {
+        background: #ddd;
+        border: none;
+    }
+}
