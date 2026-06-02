@@ -17,7 +17,7 @@
     }
 
     .middle input[type='text'] {
-        max-width: 200px;
+        width: 200px;
         
     }
 }
