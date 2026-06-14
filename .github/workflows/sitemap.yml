@@ -5,6 +5,9 @@ on:
     branches:
       - main  # আপনার প্রধান ব্রাঞ্চের নাম master হলে main কেটে master লিখুন
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Node 20 Deprecation ওয়ার্নিং এড়ানোর জন্য এটি যুক্ত করা হয়েছে
+
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
