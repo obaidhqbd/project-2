@@ -1,0 +1,30 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main  # আপনার প্রধান ব্রাঞ্চের নাম master হলে main কেটে master লিখুন
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # নিখুঁত 'lastmod' বা আপডেটের তারিখ পাওয়ার জন্য এটি প্রয়োজন
+
+    - name: Generate the sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://obaidhqbd.github.io/project-2/
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add sitemap.xml robots.txt || true
+        git commit -m "Automated sitemap generation" || echo "No changes to commit"
+        git push || echo "Push failed"
